@@ -24,8 +24,8 @@ $(function () {
     let formValid = validateForm();
     if (formValid) {
       const name = $('input.name').val();
-      alert(`Hi ${name}, thank you for contacting us`);
-      clearForm();
+      alert(`Hi ${name}, thank you for contacting us. We'll respond shortly`);
+      clearFormInputData();
     }
   });
 });
@@ -56,8 +56,18 @@ function validateForm() {
   return isFormValid;
 }
 
-function clearForm() {
+function clearFormInputData() {
   contactForm.find('input,textarea').each(function () {
     $(this).val('');
   });
 }
+
+function clearFormErrors() {
+  contactForm.find('input,textarea').on('keydown', function () {
+    if ($(this).hasClass('is-invalid')) {
+      $(this).removeClass('is-invalid');
+    }
+  });
+}
+
+clearFormErrors();
