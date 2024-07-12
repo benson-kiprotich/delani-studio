@@ -19,8 +19,15 @@ $(function () {
   $('.what-we-do-title').addClass('fw-bold text-center');
   toggleWhatWeDo();
 
-  let formValid = validateForm();
-  if (formValid) $('input.name').val();
+  contactForm.on('submit', function (event) {
+    event.preventDefault();
+    let formValid = validateForm();
+    if (formValid) {
+      const name = $('input.name').val();
+      alert(`Hi ${name}, thank you for contacting us`);
+      clearForm();
+    }
+  });
 });
 
 //  function to toggle what we do
@@ -47,4 +54,10 @@ function validateForm() {
     }
   });
   return isFormValid;
+}
+
+function clearForm() {
+  contactForm.find('input,textarea').each(function () {
+    $(this).val('');
+  });
 }
