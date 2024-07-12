@@ -13,6 +13,8 @@
 .hero-content {
   padding: 20px;
   border-radius: 10px;
+  position: relative; /* Ensure z-index works properly */
+  z-index: 1; /* Ensure content is above the background image */
 }
 .hero-content h1 {
   font-size: 3rem;
@@ -20,5 +22,10 @@
 }
 .hero-content p {
   font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px; /* Adjust as per your logo dimensions */
   margin-bottom: 20px;
 }

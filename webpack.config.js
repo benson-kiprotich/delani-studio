@@ -19,13 +19,17 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Coin Counter',
+      title: 'Delani Studio',
       template: './src/index.html',
       inject: 'body',
     }),
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
