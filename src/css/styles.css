@@ -52,3 +52,30 @@
   line-height: 1;
 }
 
+.services-section {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url('../assets/backgrounds/s_image.jpg');
+}
+
+.services-content {
+  padding: 20px;
+  border-radius: 10px;
+  position: relative; /* Ensure z-index works properly */
+  z-index: 1; /* Ensure content is above the background image */
+}
+
+.services-content h1 {
+  font-size: 2rem;
+  margin-bottom: 2px;
+}
+.services-content p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
