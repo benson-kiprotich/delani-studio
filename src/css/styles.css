@@ -10,6 +10,7 @@
   color: white;
   background: url('../assets/backgrounds/h_img.jpg');
 }
+
 .hero-content {
   padding: 20px;
   border-radius: 10px;
@@ -29,3 +30,12 @@
   width: 100px; /* Adjust as per your logo dimensions */
   margin-bottom: 20px;
 }
+
+.mouse-click {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
