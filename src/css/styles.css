@@ -52,6 +52,7 @@
   line-height: 1;
 }
 
+/* Services Section */
 .services-section {
   height: 50vh;
   background-size: cover;
@@ -78,4 +79,19 @@
 .services-content p {
   font-size: 0.8rem;
   margin-bottom: 10px;
+}
+
+/* What we do section */
+#what-we-do {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+#what-we-do .service {
+  cursor: pointer;
+}
+
+#what-we-do .service .service-details {
+  display: none;
 }
