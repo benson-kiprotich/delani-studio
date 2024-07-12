@@ -11,6 +11,7 @@
   text-align: center;
   color: white;
   background: url('../assets/backgrounds/h_img.jpg');
+  background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -68,6 +69,7 @@
   text-align: center;
   color: white;
   background: url('../assets/backgrounds/s_image.jpg');
+  background-repeat: no-repeat;
 }
 
 .services-content {
@@ -113,7 +115,7 @@
 }
 
 #portfolio .project .project-name {
-  top: 46%;
+  top: 40%;
   text-align: center;
   width: 100%;
   color: #fff;
@@ -147,3 +149,39 @@
   display: block;
 }
 /* End Portfolio section */
+
+/* Contact Us section */
+#contact {
+  background: url("../assets/backgrounds/c_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact input {
+  height: 45px;
+}
+
+#contact input,
+#contact textarea {
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #cccccc;
+}
+
+#contact input:focus, #contact input:active,
+#contact textarea:focus,
+#contact textarea:active {
+  box-shadow: none;
+  border-color: #fff;
+}
+
+#contact button:focus, #contact button:active {
+  box-shadow: none;
+  border-color: #fff;
+}
+/* End Contact Us section */
