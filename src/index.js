@@ -3,6 +3,8 @@ import $ from 'jquery';
 
 import './css/styles.css'; // bootstrap css and custom css
 
+const contactForm = $('#contact-form');
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -16,6 +18,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 $(function () {
   $('.what-we-do-title').addClass('fw-bold text-center');
   toggleWhatWeDo();
+
+  let formValid = validateForm();
+  if (formValid) $('input.name').val();
 });
 
 //  function to toggle what we do
@@ -29,4 +34,17 @@ function toggleWhatWeDo() {
       $('.service-card', this).hide();
     }
   });
+}
+
+function validateForm() {
+  let isFormValid = true;
+  const formInputs = contactForm.find('input, textarea');
+
+  formInputs.each(function () {
+    if (!$(this).val()) {
+      $(this).addClass('is-invalid');
+      isFormValid = false;
+    }
+  });
+  return isFormValid;
 }
