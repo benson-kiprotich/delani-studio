@@ -1,4 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Hero Section */
 .hero-section {
   height: 100vh;
   background-size: cover;
@@ -38,7 +40,9 @@
   transform: translateX(-50%);
   z-index: 2;
 }
+/* End Hero Section */
 
+/* About Us Section */
 .about-section {
   padding: 40px 0; /* Adjust padding as needed */
   text-align: center;
@@ -51,6 +55,7 @@
   font-size: 1rem;
   line-height: 1;
 }
+/* End About Us Section */
 
 /* Services Section */
 .services-section {
@@ -80,6 +85,7 @@
   font-size: 0.8rem;
   margin-bottom: 10px;
 }
+/* End About Us Section */
 
 /* What we do section */
 #what-we-do {
@@ -95,3 +101,4 @@
 #what-we-do .service .service-details {
   display: none;
 }
+/* End What we do section */
