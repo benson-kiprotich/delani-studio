@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "jquery": "^3.7.1",
     "webpack": "5.87.0"
   }
 }
